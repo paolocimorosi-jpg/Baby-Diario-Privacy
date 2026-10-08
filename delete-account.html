@@ -1,28 +1,123 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eliminazione account e dati - Baby Diario</title>
-  <style>
-    body{font-family:Arial,sans-serif;max-width:850px;margin:40px auto;padding:0 20px;line-height:1.65;color:#222}
-    h1,h2{color:#3f3a56}.box{background:#f7f5fb;padding:16px 20px;border-radius:12px}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baby Diario – Eliminare i dati</title>
+<meta name="description" content="Come eliminare i dati di Baby Diario (it.pesobimba.app) dal telefono e da Google Drive.">
+<style>
+  :root {
+    --bg: #fbf8f6;
+    --surface: #ffffff;
+    --text: #2b2730;
+    --muted: #6b6470;
+    --accent: #c2577a;
+    --accent-soft: #fbe9ef;
+    --border: #ece4e8;
+    --ok: #2f7d5b;
+    --ok-soft: #e6f4ed;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17151a;
+      --surface: #211e25;
+      --text: #ece8ef;
+      --muted: #a79fae;
+      --accent: #f08fb0;
+      --accent-soft: #3a2630;
+      --border: #332e38;
+      --ok: #7fd1a8;
+      --ok-soft: #1e3329;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { margin-bottom: 28px; }
+  .app { color: var(--accent); font-weight: 700; letter-spacing: .02em; font-size: 15px; margin: 0 0 6px; }
+  h1 { font-size: clamp(26px, 6vw, 34px); line-height: 1.2; margin: 0 0 10px; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; }
+  h2 {
+    font-size: 20px; line-height: 1.3;
+    margin: 40px 0 12px; padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+  p, ul, ol { margin: 0 0 12px; }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  strong { font-weight: 650; }
+  .summary {
+    background: var(--ok-soft);
+    border: 1px solid color-mix(in srgb, var(--ok) 30%, transparent);
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+  .summary p:last-child { margin: 0; }
+  .note {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 14px 0;
+  }
+  .path { font-weight: 650; }
+  code { font-size: .92em; background: var(--accent-soft); padding: 1px 5px; border-radius: 5px; overflow-wrap: anywhere; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+</style>
 </head>
 <body>
-<h1>Eliminazione account e dati - Baby Diario</h1>
-<div class="box">
-<p><strong>Baby Diario</strong> consente di eliminare definitivamente l'account e i dati associati oppure di eliminare i dati salvati mantenendo attivo l'account.</p>
-</div>
-<h2>Eliminare tutti i dati mantenendo l'account</h2>
-<p>Nell'app Baby Diario è disponibile la funzione <strong>“Elimina tutti i dati”</strong>. Prima dell'eliminazione viene richiesta una conferma esplicita.</p>
-<p>Questa funzione elimina i dati gestiti dall'app associati all'utente, inclusi, ove presenti, profili dei bambini, pesate, poppate, pannolini, sonno, temperature, medicinali, dati di crescita, note, diario, foto/avatar e cronologia. L'account di accesso rimane attivo.</p>
-<h2>Eliminare l'account</h2>
-<p>Per eliminare definitivamente anche l'account, apri Baby Diario, accedi al tuo account e usa la funzione <strong>Elimina account</strong> disponibile nella sezione Account. Segui le istruzioni mostrate a schermo per confermare l'eliminazione.</p>
-<h2>Dati eventualmente conservati</h2>
-<p>Alcuni dati possono essere conservati solo quando necessario per obblighi di legge, sicurezza, prevenzione di abusi o per il tempo tecnicamente necessario al completamento delle procedure di eliminazione e dei sistemi di backup, secondo quanto previsto dai servizi utilizzati.</p>
-<h2>Assistenza</h2>
-<p>Per assistenza sull'eliminazione dei dati o dell'account: <strong>babydiario.support@gmail.com</strong></p>
-<p><a href="./">Torna alla Privacy Policy di Baby Diario</a></p>
+<main>
+
+<header>
+  <p class="app">Baby Diario</p>
+  <h1>Eliminare i dati</h1>
+  <p class="meta">Ultimo aggiornamento: 9 ottobre 2026 · valida dalla versione 7.7.2 dell'app Android (<code>it.pesobimba.app</code>)</p>
+</header>
+
+<section class="summary">
+  <p><strong>Baby Diario non crea un account sui nostri server.</strong> I dati restano sul tuo telefono e, se usi la famiglia, nel tuo Google Drive. L'accesso con Google serve solo per la famiglia su Drive. Lo sviluppatore non conserva nessun dato, quindi sei tu a poterli cancellare in qualsiasi momento, seguendo i passaggi qui sotto.</p>
+</section>
+
+<h2>Eliminare tutti i dati</h2>
+<ol>
+  <li>Apri Baby Diario.</li>
+  <li>Vai in <span class="path">Profilo → ⚙️ Impostazioni → Dati e backup</span>.</li>
+  <li>In fondo tocca <strong>“Elimina tutti i dati”</strong> e conferma.</li>
+</ol>
+<p>Vengono eliminati in modo definitivo i profili dei bambini, pesate, poppate, pannolini, sonno, temperature, medicinali, misure di crescita, diario, note, foto e cronologia delle modifiche. Se la famiglia è attiva, la cancellazione arriva anche al file su Google Drive e agli altri telefoni della famiglia.</p>
+<p>Il tuo account Google non viene toccato.</p>
+
+<h2>Eliminare il diario di un solo bambino</h2>
+<p>Se nell'app hai più bambini, apri il Profilo del bambino e usa il pulsante per eliminare il suo diario. Gli altri diari restano com'erano.</p>
+
+<h2>Uscire dalla famiglia</h2>
+<p>Vai in <span class="path">Profilo → ⚙️ Impostazioni → Famiglia e account</span> e tocca <strong>“Esci dalla famiglia su questo telefono”</strong>. Il telefono smette di sincronizzarsi con Google Drive.</p>
+<p>Chi ha creato la famiglia può anche togliere l'accesso a un singolo membro da <strong>“Membri e ruoli”</strong>.</p>
+
+<h2>Eliminare il file della famiglia da Google Drive</h2>
+<p>Il file della famiglia è nel Google Drive di chi l'ha creata. Per cancellarlo apri Google Drive, elimina la cartella <strong>“Baby Diario – …”</strong> e poi svuota il cestino. Gli altri membri perdono l'accesso al diario condiviso.</p>
+
+<h2>Revocare l'accesso dell'app al tuo account Google</h2>
+<p>Apri <a href="https://myaccount.google.com/connections" rel="noopener">myaccount.google.com/connections</a>, scegli <strong>Baby Diario</strong> e rimuovi la connessione. Da quel momento l'app non può più accedere al tuo Google Drive.</p>
+
+<h2>Backup e file esportati</h2>
+<p>I backup creati dall'app sono nella cartella <code>Download/BabyDiario</code> del telefono e non vengono cancellati con l'app. Puoi eliminarli con l'app File del telefono. I PDF, i CSV e i backup che hai salvato altrove o inviato ad altri vanno cancellati dove li hai messi.</p>
+
+<h2>Disinstallare l'app</h2>
+<p>Disinstallando Baby Diario vengono rimossi i dati salvati nell'app sul telefono. Restano i backup in <code>Download/BabyDiario</code> e l'eventuale file della famiglia su Google Drive, che puoi cancellare come spiegato sopra.</p>
+
+<div class="note">Per aiuto scrivi a <a href="mailto:babydiario.support@gmail.com">babydiario.support@gmail.com</a>. Visto che non riceviamo i tuoi dati, non possiamo cancellarli al posto tuo, ma ti aiutiamo volentieri a farlo.</div>
+
+<footer>
+  <p><a href="./">Informativa sulla privacy di Baby Diario</a> · <a href="mailto:babydiario.support@gmail.com">babydiario.support@gmail.com</a></p>
+</footer>
+
+</main>
 </body>
 </html>

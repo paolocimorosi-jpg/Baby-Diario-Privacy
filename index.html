@@ -1,64 +1,214 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy - Baby Diario</title>
-  <style>
-    body{font-family:Arial,sans-serif;max-width:850px;margin:40px auto;padding:0 20px;line-height:1.65;color:#222}
-    h1,h2{color:#3f3a56} h1{margin-bottom:4px}
-    .muted{color:#666}.box{background:#f7f5fb;padding:16px 20px;border-radius:12px}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baby Diario – Informativa sulla privacy</title>
+<meta name="description" content="Informativa sulla privacy dell'app Android Baby Diario (it.pesobimba.app).">
+<style>
+  :root {
+    --bg: #fbf8f6;
+    --surface: #ffffff;
+    --text: #2b2730;
+    --muted: #6b6470;
+    --accent: #c2577a;
+    --accent-soft: #fbe9ef;
+    --border: #ece4e8;
+    --ok: #2f7d5b;
+    --ok-soft: #e6f4ed;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17151a;
+      --surface: #211e25;
+      --text: #ece8ef;
+      --muted: #a79fae;
+      --accent: #f08fb0;
+      --accent-soft: #3a2630;
+      --border: #332e38;
+      --ok: #7fd1a8;
+      --ok-soft: #1e3329;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { margin-bottom: 28px; }
+  .app { color: var(--accent); font-weight: 700; letter-spacing: .02em; font-size: 15px; margin: 0 0 6px; }
+  h1 { font-size: clamp(26px, 6vw, 34px); line-height: 1.2; margin: 0 0 10px; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; }
+  h2 {
+    font-size: 20px; line-height: 1.3;
+    margin: 40px 0 12px; padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+  h2 .n { color: var(--accent); margin-right: 6px; }
+  h3 { font-size: 16px; margin: 20px 0 6px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  strong { font-weight: 650; }
+  .summary {
+    background: var(--ok-soft);
+    border: 1px solid color-mix(in srgb, var(--ok) 30%, transparent);
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+  .summary h2 { border: 0; margin: 0 0 10px; padding: 0; color: var(--ok); font-size: 18px; }
+  .summary ul { margin: 0; }
+  .note {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 14px 0;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 12px 0;
+  }
+  dl { margin: 0; }
+  dt { font-weight: 650; }
+  dd { margin: 0 0 10px; color: var(--muted); }
+  dd:last-child { margin-bottom: 0; }
+  code { font-size: .92em; background: var(--accent-soft); padding: 1px 5px; border-radius: 5px; overflow-wrap: anywhere; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+</style>
 </head>
 <body>
-<h1>Privacy Policy di Baby Diario</h1>
-<p class="muted">Ultimo aggiornamento: 4 settembre 2026</p>
+<main>
 
-<div class="box">
-<p><strong>Baby Diario</strong> è un'applicazione sviluppata e distribuita da <strong>Paolo Cimorosi</strong> per aiutare genitori e tutori a registrare e consultare informazioni quotidiane relative alla crescita e alla cura del bambino.</p>
-<p>Baby Diario è uno strumento informativo e organizzativo e <strong>non è un dispositivo medico e non sostituisce il pediatra o altro personale sanitario qualificato</strong>. Per pareri medici, diagnosi o trattamenti è necessario rivolgersi a un professionista sanitario.</p>
+<header>
+  <p class="app">Baby Diario</p>
+  <h1>Informativa sulla privacy</h1>
+  <p class="meta">Ultimo aggiornamento: 9 ottobre 2026 · valida dalla versione 7.7.2 dell'app Android (<code>it.pesobimba.app</code>)</p>
+</header>
+
+<section class="summary" aria-labelledby="breve">
+  <h2 id="breve">In breve</h2>
+  <ul>
+    <li>Tutto quello che scrivi in Baby Diario resta <strong>sul tuo telefono</strong>.</li>
+    <li>Lo sviluppatore <strong>non ha server</strong> e <strong>non riceve</strong> i tuoi dati né quelli del tuo bambino.</li>
+    <li>Se attivi la <strong>famiglia</strong>, il diario viene salvato <strong>nel tuo Google Drive</strong> e condiviso solo con le persone che inviti tu.</li>
+    <li>L'app <strong>non contiene pubblicità</strong>, non usa strumenti di statistica o di tracciamento e non vende né cede dati a nessuno.</li>
+    <li>Puoi cancellare tutto in qualsiasi momento dall'app.</li>
+  </ul>
+</section>
+
+<h2><span class="n">1.</span>Chi sviluppa l'app e come contattarci</h2>
+<p>Baby Diario è sviluppata e distribuita da Paolo Cimorosi, sviluppatore indipendente con sede in Italia.</p>
+<p>Per qualsiasi domanda su questa informativa o sui tuoi dati scrivi a <a href="mailto:babydiario.support@gmail.com">babydiario.support@gmail.com</a>.</p>
+
+<h2><span class="n">2.</span>Quali dati inserisci nell'app</h2>
+<p>Baby Diario serve a tenere il diario di crescita del bambino. I dati li inserisci tu, e solo quelli che scegli di inserire:</p>
+<div class="card">
+  <dl>
+    <dt>Profilo del bambino</dt>
+    <dd>Nome, sesso, data di nascita, peso, lunghezza e circonferenza cranica alla nascita, settimane di gestazione, nome del pediatra, note importanti e, se vuoi, una foto.</dd>
+    <dt>Registrazioni quotidiane</dt>
+    <dd>Pesate, poppate e biberon, pappe e alimenti provati (con eventuali reazioni), pannolini e vasino, sonno, temperatura, medicinali e dosi, lunghezza e circonferenza cranica.</dd>
+    <dt>Diario e salute</dt>
+    <dd>Note, visite e controlli, ricordi e tappe, vaccinazioni fatte (con data e centro vaccinale).</dd>
+    <dt>Impostazioni</dt>
+    <dd>Promemoria, tema, moduli visibili e preferenze dell'app.</dd>
+  </dl>
 </div>
+<p>Alcune di queste informazioni riguardano la salute del bambino. Per questo l'app è progettata in modo che restino sotto il tuo controllo e non passino mai dallo sviluppatore.</p>
+<div class="note">Baby Diario è uno strumento per organizzare e consultare le informazioni: <strong>non è un dispositivo medico</strong> e non sostituisce il pediatra. Per diagnosi, cure o dubbi sulla salute del bambino rivolgiti sempre a un professionista sanitario.</div>
 
-<h2>1. Dati trattati</h2>
-<p>L'app può trattare i dati inseriti volontariamente dall'utente, tra cui dati del profilo del bambino (ad esempio nome, data di nascita, sesso, fotografia e informazioni relative alla nascita) e informazioni relative alla crescita e alla routine, quali peso, lunghezza, circonferenza cranica, temperatura, poppate, biberon, pannolini, sonno, medicinali, note e relativi orari.</p>
-<p>Se l'utente utilizza le funzioni account e cloud, possono inoltre essere trattati dati dell'account, come indirizzo email e identificativo dell'utente, nonché le informazioni necessarie alla sincronizzazione e alla condivisione familiare.</p>
+<h2><span class="n">3.</span>Dove vengono conservati</h2>
+<p>I dati sono salvati nella memoria interna del telefono, nello spazio riservato all'app, che le altre app non possono leggere. La foto del bambino resta solo sul telefono e non viene sincronizzata.</p>
+<p>Lo sviluppatore non gestisce alcun server o database online: non riceve, non vede e non conserva i dati che inserisci.</p>
+<p><strong>Backup di Android.</strong> Se sul telefono è attivo il backup di Android (per esempio con Google One), il sistema può includere i dati dell'app nel backup del tuo account Google, come fa con le altre app. Questo backup è gestito da Google secondo le impostazioni del tuo telefono.</p>
 
-<h2>2. Finalità e basi giuridiche del trattamento</h2>
-<p>I dati vengono utilizzati esclusivamente per fornire le funzionalità richieste dall'utente: registrazione e consultazione del diario, elaborazione di riepiloghi e grafici, esportazione dei dati, backup/sincronizzazione cloud e, quando attivata dall'utente, condivisione con membri della famiglia autorizzati.</p>
-<p>Per i dati personali necessari alla creazione e gestione dell'account e all'erogazione delle funzionalità richieste, la base giuridica è l'esecuzione del servizio richiesto dall'utente ai sensi dell'art. 6, par. 1, lett. b) GDPR.</p>
-<p>Per i dati relativi alla salute e alla crescita del bambino, che possono rientrare nelle categorie particolari di dati personali, il trattamento avviene sulla base del consenso esplicito dell'utente ai sensi dell'art. 9, par. 2, lett. a) GDPR, unitamente all'art. 6, par. 1, lett. a) GDPR, ove applicabile. Il consenso può essere revocato in qualsiasi momento, senza pregiudicare la liceità del trattamento effettuato prima della revoca.</p>
-<p>I dati sanitari o relativi al bambino non vengono utilizzati per pubblicità personalizzata, profilazione commerciale o vendita a data broker.</p>
+<h2><span class="n">4.</span>Famiglia su Google Drive (facoltativa)</h2>
+<p>Se vuoi condividere il diario con partner, nonni o babysitter, puoi attivare la funzione Famiglia da <em>Profilo → Impostazioni → Famiglia e account</em>. Se non la attivi, l'app non si collega a nessun servizio online.</p>
+<h3>Cosa succede quando la attivi</h3>
+<ul>
+  <li><strong>Accesso con Google.</strong> Accedi con il tuo account Google. L'app legge il tuo nome e il tuo indirizzo email per mostrarli agli altri membri della famiglia (per esempio in “Chi ha modificato cosa”) e per gestire gli inviti.</li>
+  <li><strong>File del diario nel tuo Drive.</strong> Chi crea la famiglia ottiene nel proprio Google Drive la cartella “Baby Diario – …” con il file “Diario famiglia – …”. Il file contiene i profili e le registrazioni dei bambini (esclusa la foto) e la cronologia delle modifiche con autore e orario. Occupa lo spazio di Google Drive di chi crea la famiglia.</li>
+  <li><strong>Inviti.</strong> Quando inviti qualcuno, l'app usa la condivisione di Google Drive: Google invia un'email alla persona invitata e le dà accesso in modifica o in sola lettura, come scegli tu. I membri della famiglia vedono nome ed email degli altri membri.</li>
+  <li><strong>Accesso limitato.</strong> L'app usa il permesso Google Drive più ristretto (<code>drive.file</code>): può accedere solo ai file creati dall'app o a quelli che scegli tu. Non può vedere gli altri file del tuo Drive.</li>
+  <li><strong>Trasmissione protetta.</strong> I dati viaggiano tra il telefono e Google Drive con connessione cifrata (HTTPS).</li>
+</ul>
+<p>I dati salvati su Google Drive sono trattati da Google secondo le <a href="https://policies.google.com/privacy?hl=it" rel="noopener">Norme sulla privacy di Google</a>. Lo sviluppatore non ha accesso al tuo Drive né al file della famiglia.</p>
+<h3>Come smettere</h3>
+<ul>
+  <li><em>Esci dalla famiglia su questo telefono</em>: il telefono smette di sincronizzarsi.</li>
+  <li>Il proprietario può togliere l'accesso a un membro dall'app, oppure eliminare la cartella “Baby Diario – …” dal proprio Google Drive.</li>
+  <li>Puoi revocare l'accesso dell'app al tuo account Google da <a href="https://myaccount.google.com/connections" rel="noopener">myaccount.google.com/connections</a>.</li>
+</ul>
 
-<h2>3. Archiviazione locale e servizi cloud</h2>
-<p>Parte dei dati può essere conservata localmente sul dispositivo. Per le funzioni di autenticazione, sincronizzazione cloud e condivisione familiare, Baby Diario utilizza servizi Firebase di Google, inclusi Firebase Authentication e Cloud Firestore.</p>
-<p>Google/Firebase opera come fornitore tecnico per l'erogazione di tali servizi e può trattare dati tecnici necessari al funzionamento e alla sicurezza del servizio, secondo i propri termini e le proprie misure di protezione dei dati.</p>
-<p><strong>Trasferimenti internazionali:</strong> nell'ambito dell'utilizzo dei servizi Firebase, i dati possono essere trattati anche in Paesi diversi da quello dell'utente e, in determinate circostanze, al di fuori dello Spazio Economico Europeo. Quando un trasferimento soggetto al GDPR avviene verso un Paese che non beneficia di una decisione di adeguatezza, Google prevede l'utilizzo delle garanzie applicabili, incluse le Clausole Contrattuali Standard (SCC) approvate dalla Commissione europea o altra soluzione di trasferimento prevista dalla normativa applicabile. Ulteriori informazioni sono disponibili nei Firebase Data Processing and Security Terms e nelle relative Standard Contractual Clauses.</p>
+<h2><span class="n">5.</span>Backup, PDF ed esportazioni</h2>
+<ul>
+  <li><strong>Backup automatico e rapido.</strong> L'app può salvare una copia dei dati sul telefono, nella cartella <code>Download/BabyDiario</code>. Questi file restano sul telefono anche se disinstalli l'app: puoi cancellarli tu quando vuoi.</li>
+  <li><strong>PDF, CSV e backup da condividere.</strong> Vengono creati solo quando lo chiedi tu e salvati dove scegli, oppure inviati all'app che scegli (per esempio email o WhatsApp). Da quel momento valgono le regole sulla privacy dell'app o della persona a cui li invii.</li>
+  <li><strong>Importazione.</strong> Puoi importare un backup da un file che scegli tu. Il file viene letto solo sul telefono.</li>
+</ul>
 
-<h2>4. Condivisione dei dati</h2>
-<p>I dati non vengono venduti. I dati possono essere comunicati ai fornitori tecnici strettamente necessari al funzionamento delle funzionalità cloud e, esclusivamente su scelta dell'utente, agli altri membri della famiglia che l'utente autorizza nell'app. L'accesso familiare è gestito tramite account e autorizzazioni.</p>
+<h2><span class="n">6.</span>Servizi Google Play</h2>
+<p>L'app usa i servizi di Google Play per l'accesso con Google, per avvisarti quando c'è un aggiornamento e per permetterti di lasciare una recensione senza uscire dall'app. Questi servizi sono gestiti da Google secondo le proprie norme sulla privacy; lo sviluppatore non riceve dati personali da essi.</p>
 
-<h2>5. Sicurezza</h2>
-<p>Vengono adottate misure ragionevoli per proteggere i dati. Le comunicazioni con i servizi Firebase avvengono tramite connessioni protette; l'accesso ai dati cloud è regolato tramite autenticazione e regole di sicurezza. Nessun sistema informatico può tuttavia garantire una sicurezza assoluta.</p>
+<h2><span class="n">7.</span>Cosa l'app non fa</h2>
+<ul>
+  <li>Non mostra pubblicità.</li>
+  <li>Non usa strumenti di statistica, analisi del comportamento o tracciamento.</li>
+  <li>Non vende, non affitta e non cede dati a terzi.</li>
+  <li>Non accede alla posizione, ai contatti, al microfono o alla fotocamera.</li>
+  <li>Se l'app si chiude per un errore, i dettagli tecnici dell'errore vengono salvati solo sul telefono e non vengono inviati a nessuno.</li>
+</ul>
+<div class="note">Se in futuro l'app introdurrà pubblicità o acquisti in-app, questa informativa verrà aggiornata <strong>prima</strong> del rilascio della nuova versione, indicando chiaramente quali dati vengono trattati e da chi.</div>
 
-<h2>6. Conservazione ed eliminazione</h2>
-<p>I dati vengono conservati finché sono necessari a fornire le funzionalità dell'app o finché l'utente mantiene il proprio account e i relativi dati. L'utente può eliminare singole registrazioni e può richiedere/eliminare il proprio account tramite l'app. Con l'eliminazione dell'account vengono eliminati i dati associati secondo le funzioni previste dall'app e dai servizi utilizzati, salvo eventuali dati che debbano essere conservati per obblighi di legge.</p>
-<p>I dati conservati esclusivamente sul dispositivo possono essere rimossi tramite le funzioni dell'app o eliminando i dati dell'app dal dispositivo.</p>
+<h2><span class="n">8.</span>Permessi richiesti</h2>
+<div class="card">
+  <dl>
+    <dt>Internet e stato della rete</dt>
+    <dd>Per sincronizzare la famiglia su Google Drive, se la attivi.</dd>
+    <dt>Notifiche</dt>
+    <dd>Per i timer di poppata e sonno, il promemoria della pesata e gli avvisi dei medicinali.</dd>
+    <dt>Avvio del telefono</dt>
+    <dd>Per riattivare i promemoria dopo un riavvio o un cambio di orario.</dd>
+  </dl>
+</div>
+<p>La foto del bambino si sceglie con il selettore di Android: l'app riceve solo l'immagine che scegli, senza accedere alla galleria.</p>
 
-<h2>7. Dati dei minori</h2>
-<p>Baby Diario è destinata all'uso da parte di genitori, tutori o altri adulti autorizzati e non è progettata affinché un bambino utilizzi autonomamente il servizio. Le informazioni relative al bambino vengono inserite e gestite dall'adulto che utilizza l'app.</p>
+<h2><span class="n">9.</span>Minori</h2>
+<p>Baby Diario è pensata per genitori e adulti che si prendono cura di un bambino, non per essere usata dai bambini. I dati del bambino vengono inseriti dal genitore o da chi ne ha la cura, che decide cosa registrare e con chi condividerlo.</p>
 
-<h2>8. Diritti e controllo sui dati</h2>
-<p>L'utente può consultare, correggere ed eliminare le informazioni registrate attraverso le funzionalità disponibili nell'app. Per richieste relative a privacy e dati personali è possibile contattare lo sviluppatore all'indirizzo indicato nella sezione seguente.</p>
+<h2><span class="n">10.</span>Per quanto tempo e come cancellare i dati</h2>
+<p>I dati restano finché non li cancelli. Puoi:</p>
+<ul>
+  <li>eliminare una singola registrazione dalla Cronologia o dal Diario;</li>
+  <li>eliminare il diario di un bambino dal suo Profilo;</li>
+  <li>eliminare <strong>tutti i dati</strong> da <em>Impostazioni → Dati e backup</em>. Se la famiglia è attiva, la cancellazione arriva anche al file su Google Drive e agli altri telefoni;</li>
+  <li>disinstallare l'app: i dati sul telefono vengono rimossi (restano i file di backup in <code>Download/BabyDiario</code> e l'eventuale file della famiglia su Google Drive, che puoi cancellare tu).</li>
+</ul>
+<p>Tutti i passaggi sono spiegati nella pagina <a href="delete-account.html">Eliminare i dati di Baby Diario</a>.</p>
 
-<h2>9. Diritto di reclamo</h2>
-<p>L'interessato ha il diritto di proporre reclamo a un'autorità di controllo ai sensi dell'art. 77 GDPR qualora ritenga che il trattamento dei propri dati personali violi il Regolamento. In Italia l'autorità di controllo è il <strong>Garante per la protezione dei dati personali</strong>. Il reclamo può essere presentato secondo le modalità indicate dal Garante sul proprio sito istituzionale.</p>
+<h2><span class="n">11.</span>I tuoi diritti</h2>
+<p>Poiché lo sviluppatore non riceve né conserva i dati inseriti nell'app, sei tu ad avere il pieno controllo: puoi vederli, correggerli, esportarli e cancellarli direttamente dall'app.</p>
+<p>Se scrivi all'indirizzo di supporto, il tuo indirizzo email e il contenuto del messaggio vengono usati solo per risponderti e cancellati quando non servono più.</p>
+<p>Per qualsiasi richiesta sulla protezione dei dati scrivi a <a href="mailto:babydiario.support@gmail.com">babydiario.support@gmail.com</a>. Hai anche il diritto di presentare un reclamo al <a href="https://www.garanteprivacy.it" rel="noopener">Garante per la protezione dei dati personali</a>.</p>
 
-<h2>10. Titolare e contatto privacy</h2>
-<p><strong>Sviluppatore/Titolare:</strong> Paolo Cimorosi<br>
-<strong>App:</strong> Baby Diario<br>
-<strong>Contatto privacy:</strong> babydiario.support@gmail.com</p>
+<h2><span class="n">12.</span>Sicurezza</h2>
+<p>I dati sul telefono sono protetti dal sistema Android, che impedisce alle altre app di leggerli. Le comunicazioni con Google Drive sono cifrate. Ti consigliamo di proteggere il telefono con un blocco schermo (PIN, sequenza o impronta).</p>
 
-<h2>11. Modifiche alla Privacy Policy</h2>
-<p>Questa Privacy Policy può essere aggiornata per riflettere modifiche dell'app, dei servizi utilizzati o degli obblighi applicabili. La data dell'ultimo aggiornamento è indicata all'inizio della pagina.</p>
+<h2><span class="n">13.</span>Modifiche a questa informativa</h2>
+<p>Se l'app cambia il modo in cui tratta i dati, questa pagina verrà aggiornata e la data in alto verrà modificata. Per i cambiamenti importanti ne daremo notizia anche nelle note di aggiornamento su Google Play.</p>
+
+<footer>
+  <p>Baby Diario · <a href="mailto:babydiario.support@gmail.com">babydiario.support@gmail.com</a></p>
+</footer>
+
+</main>
 </body>
 </html>
