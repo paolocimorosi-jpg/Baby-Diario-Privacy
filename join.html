@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Baby Diario – family invitation</title>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#f6f1fb;color:#2b2140;display:flex;min-height:100vh;align-items:center;justify-content:center}
+  main{max-width:420px;margin:24px;padding:28px 24px;background:#fff;border-radius:20px;box-shadow:0 6px 24px rgba(80,50,140,.12);text-align:center}
+  h1{font-size:22px;margin:0 0 8px}
+  p{font-size:15px;line-height:1.5;margin:10px 0}
+  a.btn{display:block;margin:18px 0 8px;padding:15px;border-radius:14px;background:#6b46c1;color:#fff;font-weight:700;text-decoration:none;font-size:16px}
+  a.sec{display:block;margin:6px 0;padding:13px;border-radius:14px;background:#ede7f8;color:#4a2f92;font-weight:600;text-decoration:none;font-size:14px}
+  small{color:#6d6385}
+  @media (prefers-color-scheme:dark){body{background:#17121f;color:#eee9f7}main{background:#241c33}a.sec{background:#34284a;color:#d9ccf5}small{color:#a99dc4}}
+</style>
+</head>
+<body>
+<main>
+  <h1>👶 Baby Diario</h1>
+  <p id="msg">You've been invited to a Baby Diario family diary.</p>
+  <a class="btn" id="open" href="#">Open Baby Diario</a>
+  <a class="sec" id="store" href="https://play.google.com/store/apps/details?id=it.pesobimba.app">Install from Google Play</a>
+  <p><small id="hint">Use the same Google email the invitation was sent to.</small></p>
+</main>
+<script>
+(function(){
+  var it=/^it/i.test(navigator.language||"");
+  if(it){
+    document.documentElement.lang="it";
+    document.getElementById("msg").textContent="Sei stato invitato nel diario di famiglia di Baby Diario.";
+    document.getElementById("open").textContent="Apri Baby Diario";
+    document.getElementById("store").textContent="Installa da Google Play";
+    document.getElementById("hint").textContent="Usa lo stesso indirizzo Google a cui è arrivato l'invito.";
+  }
+  var m=location.search.match(/[?&]f=([A-Za-z0-9_-]+)/);
+  var id=m?m[1]:"";
+  var store="https://play.google.com/store/apps/details?id=it.pesobimba.app";
+  var isAndroid=/android/i.test(navigator.userAgent);
+  var open=document.getElementById("open");
+  if(!id){ open.style.display="none"; return; }
+  var intentUrl="intent://join?f="+encodeURIComponent(id)+"#Intent;scheme=babydiario;package=it.pesobimba.app;S.browser_fallback_url="+encodeURIComponent(store)+";end";
+  open.href=isAndroid?intentUrl:store;
+  if(isAndroid){ setTimeout(function(){ location.href=intentUrl; },400); }
+})();
+</script>
+</body>
+</html>
